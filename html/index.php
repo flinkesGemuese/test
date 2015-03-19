@@ -1,6 +1,7 @@
 <?php
 session_start ();
-$db = mysqli_connect("localhost", "root", "", "webshop");
+
+include_once 'db_connect.php';
 
   if(!$db){
     exit("Verbindungsfehler!");
@@ -16,7 +17,7 @@ if(isset($_GET['c'])){
 include("include/navigation.php");
 include("include/content.php");
 
-if(!isset($_SESSION['id'])){
+if(isset($_SESSION['id'])){
   $id = $_SESSION['id'];
   include("include/cart.php");
 }

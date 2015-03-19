@@ -1,18 +1,14 @@
 <?php
-session_start ();
 
 
-$query = "SELECT countWHERE userID like____ FROM user_cart";
+$query = "SELECT count FROM user_cart WHERE userID = ".$_SESSION['id'];
 
 $result = mysqli_query($db, $query);
 
-foreach ($result as &$value){
-  $count = $count+$value;
-
-  }
-
- $cart='Sie haben '.$count.' Artikel in Ihrem Warenkorb.;
 
 
-unset($count);
+ #$cart='Sie haben '.$count.' Artikel in Ihrem Warenkorb.';
+
+
+#unset($count);
 ?>

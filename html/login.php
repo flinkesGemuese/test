@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once 'db_connect.php';
 $error = '';
 
 if(isset($_POST['submit']))
@@ -10,7 +11,6 @@ if(isset($_POST['submit']))
         $username = $_POST['username'];
         $password = $_POST['password'];
         
-        $db = mysqli_connect("localhost", "root", "", "webshop");
         
         
         if (mysqli_connect_errno())
