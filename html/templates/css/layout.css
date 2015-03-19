@@ -16,7 +16,7 @@ body{
 	width: 300px;	
 	height: 100px;
 	
-	background: orange;
+    background-color: rgba(105, 105, 105, 0.84);
 	
 	border-radius: 20px;
 	
@@ -153,6 +153,28 @@ body{
 	margin-top:5%;
 	margin-bottom:5%;
 	
+}
+
+#cart table{
+	width: 90%;
+	margin-left: 5%;
+	margin-top:0%;
+	margin-bottom:5%;
+}
+
+#cart div{
+	width: 90%;
+	margin-left: 5%;
+	margin-top:5%;
+	margin-bottom:5%;
+}
+
+.error{
+	width: 90%;
+	margin-left: 5%;
+	margin-top:5%;
+	margin-bottom:0px;
+    color: red;
 }
 
 #footer{

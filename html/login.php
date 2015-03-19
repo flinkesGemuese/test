@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once 'db_connect.php';
 $error = '';
 
@@ -30,11 +29,11 @@ if(isset($_POST['submit']))
                 $_SESSION['email'] = $row->email;
                 $_SESSION['name'] = $row->name;
                 $_SESSION['surname'] = $row->surname;
-                $error = 'Login!';
-                header("location: profile.php"); // Redirecting To Other Page
+                include('profile.php');
+                #header("location: profile.php"); // Redirecting To Other Page
             }
             else
-                $error = 'Unknown error';
+                $error = 'Benutzername oder Passwort falsch!';
         }
         else
             $error = 'Benutzername oder Passwort falsch!';

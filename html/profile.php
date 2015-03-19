@@ -1,15 +1,8 @@
 <?php
-session_start();// Starting Session
 include_once 'db_connect.php';
 $articles = 'keine';
 
-if (!isset($_SESSION['id']))
-{
-    
-    //echo 'Keine Session';
-    header("location: loginform.php");
-}
-else
+if (isset($_SESSION['id']))
 {
 
 $userid = $_SESSION['id'];
@@ -22,18 +15,18 @@ $query = "SELECT count(*) FROM user_cart WHERE `userid` = $userid;";
 //}
 }
 
-?>
-
-<html>
+$loginFrame="<html>
     <head>
         <title>Profile</title>
     </head>
     
     <body>
         <div>
-            <b>Willkommen <i><?php echo $_SESSION['name'].' '.$_SESSION['surname']; ?></i></b><br>
-            <b>Sie haben <?php echo $articles ?>Artikel im Warenkorb.</b><br>
-            <b><a href='logout.php'>Ausloggen</a></b>
+            <b>Willkommen <i>".$_SESSION['name'].' '.$_SESSION['surname']."</i></b><br>
+            <b>Sie haben ".$articles." Artikel im Warenkorb.</b><br>
+            <button onclick=\"window.location.href='logout.php'\">Ausloggen</button>
         </div>
     </body>
-</html>
+</html>";
+
+?>
