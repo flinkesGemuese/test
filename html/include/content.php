@@ -29,9 +29,15 @@ $query = 'SELECT * FROM shop_item WHERE id LIKE ' .$product;
 $result = mysqli_query($db, $query);
 $row = mysqli_fetch_array($result, MYSQL_ASSOC);
 
+$content = '<form action="" method="POST">';
 
-$content = '<img src="' .$row['pictureURL']. '" class="detail_img"></br></br></br>';
+$content .= '<div align="center"><img src="' .$row['pictureURL']. '" class="detail_img"></div></br></br></br>';
 $content .= '<p id="p">' .$row['description']. '</p>';
+
+$content .= '</br></br><div class="centered"> Menge <input type="number" name="quantity" min="1" max="999" value="1" class="quantity"> St&uumlck </br>';
+$content .= ' <input type="submit" value="In den Warenkorb" class="centered"> </div>';
+
+$content .= '</form>';
 }
 
 if(!isset($product) && !isset($category)){

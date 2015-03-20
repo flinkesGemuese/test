@@ -122,6 +122,17 @@ body{
 	text-decoration: none;	
 }
 
+.quantity{
+	width: 3em;
+	
+	value: 1;
+}
+
+.centered{
+	align: center;
+	text-align: center;
+}
+
 .centeredLink{
 	align: center;
 }
@@ -129,7 +140,7 @@ body{
 .detail_img{
 	height: 300px;
 	width: 300px;
-	text-align:center;
+	margin: 0 auto;
 }
 .article_img{
 	width: 20%;
