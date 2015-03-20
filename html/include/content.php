@@ -1,4 +1,5 @@
 <?php
+include('functions.php');
 
 if(isset($category)){	
 	$query = "SELECT * FROM shop_item WHERE categoryId LIKE " .$category;	
@@ -11,7 +12,7 @@ $content= '<table>';
 
 while($zeile = mysqli_fetch_array($result, MYSQL_ASSOC)){
 		$content .= '<tr>';
-		$content .= '<th class="article_img"><a href="/index.php?p=' . $zeile['id']. '">';
+		$content .= '<th class="article_img"><a href="index.php?p=' . $zeile['id']. '">';
 		$content .= '<img src="' .$zeile['pictureURL']. '" width="100" height="100"></a>';
 		//$content .= $z;
 		$content .= '</th>';		

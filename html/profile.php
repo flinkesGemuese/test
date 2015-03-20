@@ -4,15 +4,13 @@ $articles = 'keine';
 
 if (isset($_SESSION['id']))
 {
-
+$success = true;
 $userid = $_SESSION['id'];
-$query = "SELECT count(*) FROM user_cart WHERE `userid` = $userid;";
+$query = "SELECT SUM(count) AS total FROM user_cart WHERE userId = ".$userid.";";
+$result = $db->query($query);
     
-
-//if($result = mysqli_query($db, $query))
-//{
-//    if ($row = $result->fetch_object();)
-//}
+if ($row = $result->fetch_assoc())
+    $articles = $row["total"];
 }
 
 $loginFrame="<html>

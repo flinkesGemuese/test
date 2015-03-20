@@ -2,7 +2,11 @@
 include_once 'db_connect.php';
 $error = '';
 
-if(isset($_POST['submit']))
+if (isset($_SESSION['id']))
+{
+    include('profile.php');
+}
+else if(isset($_POST['submit']))
 {
     if (!empty($_POST['username']) && !empty($_POST['password']))
     {
@@ -14,8 +18,8 @@ if(isset($_POST['submit']))
         
         if (mysqli_connect_errno())
         {
-            $error = 'asdsf';
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            $error = "Failed to connect to MySQL: " . mysqli_connect_error();
+            return;
         }
         
         $query = "SELECT id, email, name, surname FROM users WHERE `password` = '$password' AND `email` = '$username';";
