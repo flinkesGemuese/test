@@ -34,7 +34,7 @@ $content = '<form action="" method="POST">';
 $content .= '<div align="center"><img src="' .$row['pictureURL']. '" class="detail_img"></div></br></br></br>';
 $content .= '<p id="p">' .$row['description']. '</p>';
 
-$content .= '</br></br><div class="centered"> Menge <input type="number" name="quantity" min="1" max="999" value="1" class="quantity"> St&uumlck </br>';
+$content .= '</br></br><div class="centered">Preis:'. $row['price'] .' €</br>Menge <input type="number" name="quantity" min="1" max="999" value="1" class="quantity"> St&uumlck </br>';
 $content .= ' <input type="submit" name="purchase" value="In den Warenkorb" class="centered"> </div>';
 
 $content .= '</form>';
