@@ -35,7 +35,7 @@ $content .= '<div align="center"><img src="' .$row['pictureURL']. '" class="deta
 $content .= '<p id="p">' .$row['description']. '</p>';
 
 $content .= '</br></br><div class="centered"> Menge <input type="number" name="quantity" min="1" max="999" value="1" class="quantity"> St&uumlck </br>';
-$content .= ' <input type="submit" value="In den Warenkorb" class="centered"> </div>';
+$content .= ' <input type="submit" name="purchase" value="In den Warenkorb" class="centered"> </div>';
 
 $content .= '</form>';
 }
