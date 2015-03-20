@@ -129,7 +129,7 @@ body{
 .detail_img{
 	height: 300px;
 	width: 300px;
-	align:center;
+	text-align:center;
 }
 .article_img{
 	width: 20%;
