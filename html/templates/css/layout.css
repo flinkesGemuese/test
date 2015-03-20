@@ -188,6 +188,7 @@ body{
     color: red;
 }
 
+
 #footer{
 	width: 1200px;
 	height: 50px;
@@ -197,4 +198,10 @@ body{
 	clear: both;
 	
 	border-radius: 20px;	
+}
+
+#footer td{
+	width: 400px;
+	text-align: center;
+	vertical-align: middle;
 }
