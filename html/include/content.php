@@ -49,4 +49,24 @@ if(!isset($product) && !isset($category)){
 				Wir w&uumlnschen angenehmes Einkaufen </br></br></br>
 				Ihr Gew&uumlrzheini24-Team</h1>';	
 }
+
+if(isset($info)){
+	if($info == 1){
+		$content = '
+			<h1>Impressum</h1>
+
+			Gewürzheini24</br>
+			Grüne Straße 123</br>
+			12345 Pflanzstadt</br></br>
+
+			Telefon: 0123/4567890</br>
+			E-Mail: info@gewuerzheini24.de</br></br>
+
+			Geschäftsführer: Admin Adminovich</br></br>
+
+			Eingetragen im Handelsregister beim Gewerbeaufsichtsamt Pflanzstadt, Amtsstraße 1, 12345
+			unter Nummer A 12345</br></br>
+			';
+	}
+}
 ?>
