@@ -1,5 +1,6 @@
 body{
 	background: gray;
+    background-image:url(imgres.jpg);
 }
 
 #overview{
@@ -7,7 +8,7 @@ body{
 	
 	margin: 0 auto;
 	
-	background: green;
+	background: rgba(128, 79, 0, 0.54);
 	border-radius: 20px;	
 }
 
@@ -18,7 +19,6 @@ body{
 	
     background-color: rgba(105, 105, 105, 0.84);
 	
-	border-radius: 10px;
 	
 }
 
@@ -26,9 +26,8 @@ body{
 	width: 900px;
 	height: 100px;
 	
-	background: darkgray;
+	background: rgba(211, 193, 183, 0.63);
 	
-	border-radius: 10px;
 	
 }
 
