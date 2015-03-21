@@ -10,7 +10,8 @@ $query = "SELECT SUM(count) AS total FROM user_cart WHERE userId = ".$userid.";"
 $result = $db->query($query);
     
 if ($row = $result->fetch_assoc())
-    $articles = $row["total"];
+    if (isset($row["total"]))
+        $articles = $row["total"];
 }
 
 $loginFrame="<html>
@@ -21,7 +22,7 @@ $loginFrame="<html>
     <body>
         <div>
             <b>Willkommen <i>".$_SESSION['name'].' '.$_SESSION['surname']."</i></b><br>
-            <b>Sie haben ".$articles." Artikel im Warenkorb.</b><br>
+            <button onclick=\"window.location.href='index.php?cart'\">Warenkorb (".$articles." Artikel)</button><br>
             <button onclick=\"window.location.href='logout.php'\">Ausloggen</button>
         </div>
     </body>
