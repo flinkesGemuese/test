@@ -29,7 +29,7 @@ while($row = mysqli_fetch_array($result, MYSQL_ASSOC)){
 	$content .= '<td><b>'.$item['name'] . '</b></br>' . $item['descriptionShort'].'<br>Preis: '.$item['price'].'€</td>';
     
     $content .= '<td ><b>Menge: </b><input type="number" name="count" min="1" max="999" value='.$row["count"].'><input type="submit" name="updateCnt" value="&Auml;ndern" ></br>';
-    $content .= '<b>Gesamt: </b>'.$cost.'€</br><br>';
+    $content .= '<b>Gesamt: </b>'.$cost.'€</br>';
     $content .= '<input type="submit" name="deleteItem" value="Entfernen">';
 	$content .= '</td>';
     
