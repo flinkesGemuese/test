@@ -8,8 +8,7 @@ body{
 	
 	margin: 0 auto;
 	
-	background: rgba(128, 79, 0, 0.54);
-	border-radius: 20px;	
+	background: rgba(128, 79, 0, 0.54);	
 }
 
 #cart{
@@ -35,28 +34,28 @@ body{
 	font-size: 90px;
 	font-weight: bold;
 	
-	color: gray;
+	color: black;
 	
 	text-align: center;
 }
 
 #header a:link{
-	color: gray;
+	color: black;
 	text-decoration: none;	
 }
 
 #header a:visited{
-	color: gray;	
+	color: black;	
 	text-decoration: none;	
 }
 
 #header a:hover{
-	color: gray;
+	color: black;
 	text-decoration: none;		
 }
 
 #header a:active{
-	color: gray;
+	color: black;
 	text-decoration: none;	
 }
 
@@ -190,13 +189,11 @@ body{
 
 #footer{
 	width: 1200px;
-	height: 50px;
+	height: 60px;
 	
-	background: darkgray;
+	background: rgba(211, 193, 183, 0.63);
 	
 	clear: both;
-	
-	border-radius: 20px;	
 }
 
 #footer td{
